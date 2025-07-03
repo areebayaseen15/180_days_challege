@@ -97,7 +97,7 @@ const cities = {
   c: "Lahore"
 };
 
-console.log(cities); // 👈 ye check karein ke structure sahi hai
+console.log(cities); 
 
 for (let key in cities) {
   console.log(key + ": " + cities[key]);
@@ -111,7 +111,8 @@ for (const i in array) {
   console.log(i);   //output 0,1,2
 }
 
-// for of =>The for...of loop iterates over the values of many types of iterables, including arrays, and special collection types like Set and Map. For each value in the iterable object, the code in the code block is executed.
+// for of =>The for...of loop iterates over the values of many types of iterables, including arrays, and special
+collection types like Set and Map. For each value in the iterable object, the code in the code block is executed.
 
 const arr=["beef", "Mutton" , "pulao"]
 for(let i of arr){
