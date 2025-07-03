@@ -1,3 +1,61 @@
+/For loop
+
+// pass 3 parameters first one is assignment of the iterator or variable ,
+// condition ,increament
+for (let i = 0 ; i< 10 ; i++ ){
+    console.log(`for loop number:${i}`);
+}
+
+
+// for loop in array
+const arr = [1, 2, 3, 4, 5];
+for (let i = 0 ; i<arr.length ; i++){
+    console.log(`For loop in array number: ${arr[i]}}}`)
+}
+
+// forOf loop
+const todos = ['Buy groceries', 'Clean the house', 'Pay bills'];
+for(let todo of todos){
+    console.log(`For of loop number: ${todo}`)
+}
+const persons=[
+    {
+        id:1,
+        name:"John",
+        age: 30,
+    },
+       {
+        id:2,
+        name:"Areeba",
+        age: 25,
+    },
+       {
+        id:3,
+        name:"Amna",
+        age: 21,
+    },
+]
+for(let person of persons){
+    console.log(`For of loop in object number: ${person.name}, Age: ${person.age}`);
+}
+
+//High order array methods
+// for each loop to iterate over an array
+
+persons.forEach(function(person){
+    console.log(`For each loop in object number: ${person.name}, Age: ${person.age}`);
+})
+
+// map => allow us to create a new array by applying a function 
+// to each element of the original array
+
+const personage =persons.map(function(person){
+    return person.age;
+     
+})
+console.log(`Map method to get ages: ${personage}`);
+//Filter create new array based on a condition
+
 
 
 // filter method
@@ -79,13 +137,12 @@ for(let i of set){
     console.log(i)
 }
 
-// While loop
 
-let i = 2
-
-while(i<10){
-    console.log(i);
-    i++
+// while loop
+let i = 0;
+while(i < 10){
+    console.log(`while loop number:${i}`)
+    i++;
 }
 console.log("#####################")
 //  do...while loop is guaranteed to run at least once, even if the condition expression already evaluates to true.
