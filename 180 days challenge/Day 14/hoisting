@@ -1,0 +1,52 @@
+
+
+
+// hoisting  concept in javascript
+
+// JavaScript aap ke variables aur functions ko automatically upar le jata hai (before code runs).
+
+// Lekin sab cheezain ek jese hoist nahi hoti. Kuch kaam karte hain hoisting ke baad, aur kuch error dete hain.
+
+// 🔹 Function Declarations are Hoisted (Aur kaam karte hain):
+
+sayHello();  // ✅ Works!
+
+function sayHello() {
+  console.log("Hello!");
+}
+// Yahan sayHello ko hum ne define baad mein kiya, lekin call pehle karli — phir bhi chal gaya.
+// JavaScript ne function sayHello() ko upar le gaya internally.
+
+//  Function Expressions are Hoisted (Lekin kaam nahi karte):
+sayHi();  //  Error: Cannot access 'sayHi' before initialization
+
+const sayHi = function() {
+  console.log("Hi!");
+// };
+// Yeh error dega.
+
+// JavaScript sayHi ko hoist to karti hai, lekin sirf variable ka naam.
+
+// Us waqt function assign nahi hota, so sayHi = undefined hota hai.
+
+// Aur const ke sath ho to Temporal Dead Zone bhi hoti hai (neeche explain kiya hai).
+
+//  let & const and Temporal Dead Zone (TDZ)
+
+// console.log(myName);  //  Error: Cannot access 'myName' before initialization
+
+// let myName = "Cas";
+// Yahan let myName hoist to hota hai, lekin usay use karne se pehle agar access karo, to Temporal Dead Zone ka error aata hai.
+
+//  TDZ = Wo waqt jab JavaScript ne variable create to kar liya hota hai, lekin initialize nahi kiya hota.
+
+
+//Golden Rule 
+// Agar function ko seedha likha ho (function funcName()), to wo upar chala jata hai.
+
+// Agar function ko kisi variable (let, const, var) mein store kia ho, to sirf naam hoist hota hai, value nahi.
+
+// let aur const ka variable agar pehle use kar liya to error dega — isay Temporal Dead Zone kehte hain.
+
+
+
