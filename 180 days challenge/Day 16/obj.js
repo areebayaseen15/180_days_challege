@@ -110,3 +110,33 @@ console.log(this);
 // kyun? Kyun ke this global scope me hai — aur browser me global object = window
 //output {}
 // Kyunki Node.js me top-level this refers to module.exports, jo start me ek empty object hota hai.
+
+
+
+// Object.keys() to get all keys as an array
+let object = {
+  name: "Areeba",
+  age: 21,
+  course: "Web Dev"
+};
+
+let keys = Object.keys(object); 
+console.log(keys); 
+// Output: ["name", "age", "course"]
+
+console.log(keys[0]); // "name"
+console.log(object[keys[0]]); // "Areeba"
+
+// Use Object.values() to directly get values as array
+let values = Object.values(object);
+console.log(values);  //["Areeba", 21, "Web Dev"]
+console.log(values[0]); // "Areeba"
+
+
+// Use Object.entries() for [key, value] pairsas array
+let entries = Object.entries(object);
+console.log(entries);
+console.log(entries[0][0]); // "name"
+console.log(entries[0][1]); // "Areeba"
+// Object ka index nahi hota, lekin tum Object.keys() ya Object.entries() se keys ko array ki 
+// tarah treat kar sakti ho.
