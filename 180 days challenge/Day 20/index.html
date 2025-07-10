@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Quiz</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    #question {
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+      color: #444;
+    }
+
+    .answer-btn {
+      width: 250px;
+      padding: 12px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff7e5f;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .answer-btn:hover:enabled {
+      background-color: #eb5e3d;
+    }
+
+    .answer-btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    #scoreBox {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #2d3436;
+    }
+
+    @media (max-width: 500px) {
+      .answer-btn {
+        width: 90%;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+   
+  <h1>Welcome to My Quiz App</h1>
+  <h2 id="question">Question will appear here</h2>
+
+  <button id="btn1" class="answer-btn"></button><br>
+  <button id="btn2" class="answer-btn"></button><br>
+  <button id="btn3" class="answer-btn"></button><br>
+
+  <h3 id="scoreBox"></h3>
+
+  <script src="main.js"></script>
+
+</body>
+</html>

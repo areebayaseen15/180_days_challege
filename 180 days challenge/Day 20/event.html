@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EventListner</title>
+</head>
+<body>
+<!-- 1. click -->
+
+<button id="clickBtn">Click Me</button>
+
+<!-- ✅ 2. mousemove -->
+
+<div id="moveBox" style="width:200px;height:100px;background:lightblue;">Move mouse here</div>
+
+  <!-- ✅ 3. mouseover -->
+
+<div id="hoverBox" style="width:200px;height:100px;background:lightgreen;">Hover over me</div>
+
+
+<!-- ✅ 4. mouseout -->
+
+<div id="outBox" style="width:200px;height:100px;background:lightcoral;">Move mouse out</div>
+
+<!-- ✅ 5. dblclick -->
+
+<p id="dblPara">Double-click this text</p>
+
+<!-- ✅ 6. DOMContentLoaded -->
+
+<!-- ✅ 7. keydown -->
+
+<input type="text" id="keyDownInput" placeholder="Press any key" />
+
+// <!-- ✅ 8. keyup -->
+
+<input type="text" id="keyUpInput" placeholder="Release a key" />
+
+<!-- ✅ 9. submit -->
+
+<form id="myForm">
+  <input type="text" placeholder="Enter name" required />
+  <button type="submit">Submit</button>
+</form>
+
+
+
+<script>
+  document.getElementById("moveBox").addEventListener("mousemove", function () {
+    console.log("Mouse is moving inside the box");
+  });
+
+  document.getElementById("clickBtn").addEventListener("click", function () {
+    alert("Button clicked!");
+  });
+  document.getElementById("hoverBox").addEventListener("mouseover", function () {
+    console.log("Mouse is over the box");
+  });
+
+  document.getElementById("outBox").addEventListener("mouseout", function () {
+    console.log("Mouse left the box");
+  });
+
+
+  document.getElementById("dblPara").addEventListener("dblclick", function () {
+    alert("Paragraph double-clicked!");
+  });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    alert("DOM fully loaded and parsed!");
+  });
+
+  document.getElementById("keyDownInput").addEventListener("keydown", function () {
+    console.log("Key pressed down");
+  });
+
+  document.getElementById("keyUpInput").addEventListener("keyup", function () {
+    console.log("Key released");
+  });
+
+  document.getElementById("myForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent form from reloading
+    alert("Form submitted!");
+  });
+</script>
+
+</body>
+</html>
