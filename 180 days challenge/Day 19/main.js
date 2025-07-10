@@ -60,3 +60,8 @@ function handleClick(){
     
 }
 button.addEventListener("click" , handleClick);
+
+
+//select nth child
+st thirdBtn = document.querySelector('div button:nth-child(3)')
+console.log(thirdBtn)
