@@ -53,7 +53,7 @@ answerContainer.addEventListener("click", (e) => {
       if (index < questions.length) {
         showQuestion();
       } else {
-        questionEl.textContent = "🎉 Quiz Completed!";
+        questionEl.textContent = " Quiz Completed!";
         answerContainer.style.display = "none";
         scoreBox.textContent = `✅ Your score: ${score} / ${questions.length}`;
       }
