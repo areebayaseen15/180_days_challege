@@ -29,15 +29,17 @@ JavaScript modules allow you to organize and reuse code across files using `expo
   export function greet() { return "Hi"; }
   ```
 - **Default Export:**
-  ```
+```js
 export default function greet() { return "Hello"; }
 
--**Import All with Asterisk *:**
   ```
+- **Import All with Asterisk *:**
+```js
 import * as utils from './utils.js';
 console.log(utils.name);
   ```
 
+##  🛠️ Why Modules Matter
 Cleaner and organized code
 
 Reusability
