@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Debug Practice</title>
+</head>
+<body>
+  <h1>JavaScript Debugging Practice</h1>
+  <button onclick="calculateTotal()">Calculate Total</button>
+
+  
+  <!-- <script>
+    //wrong code
+    const prices = [10, 20, "30", 40];
+
+    function calculateTotal() {
+      let total = 0;
+
+      for (let i = 0; i <= prices.length; i++) {
+        total += prices[i];
+      }
+
+      alert("Total Price: " + total);
+    }
+  </script> -->
+
+  //correct code
+  <script>
+    const prices = [10 , 20 , "30" , 40];
+    function calculateTotal(){
+        let total=0
+    }
+    for (let i =0; i<prices.length; i++){
+        const price = Number(prices[i]);
+        if(isNaN(price)){
+            console.warn("Invalid price at index" , i, ":", prices[i])
+            continue
+        
+        }
+        total += price;
+    }
+    alert("Total Price:" + total)
+
+  </script>
+</body>
+</html>
